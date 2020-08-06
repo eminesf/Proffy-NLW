@@ -4,6 +4,7 @@ import landingIMG from '../../assets/images/landing.svg';
 import studyIcon from '../../assets/images/icons/study.svg';
 import giveClassesIcon from '../../assets/images/icons/give-classes.svg';
 import purpleHeartIcon from '../../assets/images/icons/purple-heart.svg';
+import './styles.css';
 
 
 
@@ -22,8 +23,8 @@ function Landing() {
                     className="hero-image"
                 />
 
-                <div className="button-container">
-                <a href="" className="study">
+                <div className="buttons-container">
+                    <a href="" className="study">
                         <img src={studyIcon} alt="Study" />
                         Estudar
                     </a>
