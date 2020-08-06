@@ -42,5 +42,26 @@ body {
 }
 
 body, input, button, textarea {
+    /* 
+    a unidade de medida 'rem' é uma escala de porcentagem do valor padrão, 
+    1rem equivale 100% do fontsize, 1.6 seria 160%
+    */
     font: 500 1.6rem Poppins;
+}
+
+.container{
+    /* 
+    vw = viewport, horizontalmente
+    */
+    width: 90vw;
+    max-width: 700px;
+}
+
+@media (min-width: 700px){
+    /*
+        Se a tela for maior que 700 pixels, a fonte aumenta no proposto
+    */
+    :root {
+        font-size: 62.5%;
+    }
 }
