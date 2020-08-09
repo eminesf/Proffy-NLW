@@ -107,3 +107,68 @@
 .total-connections img {
     margin-left:  0.8rem;
 }
+
+
+/*
+    o comando @media muda estes comando para midias com o tamanho minimo de 1100 pixels, ou seja para desktop, 1100 é o menor tamanho usado
+    atualmente para monitores
+*/
+@media (min-width: 1100px) {
+    #page-landing-content{
+        max-width: 1100px;
+
+        display: grid;
+        /*
+            'fr' comando "ocupe o que sobrar" do que foi usado pela outra medida
+            ou partes
+
+            grid-template-rows mostra quantas linhas eu quero ter no grid
+            grid-template-columns mostra quantas colunas eu quero ter no grid
+
+            grid-template-areas da nome para as areas para ser setado manualmente depois pelo css com o comando "grid-area" e o nome escolhido
+
+
+        */
+        grid-template-rows: 350px 1fr;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-areas: 
+        "logo hero hero"
+        "buttons buttons total"
+        ;
+    }
+}
+
+.logo-container {
+    grid-area: logo;
+    align-self: center;
+    margin: 0;
+}
+
+.logo-container h2 {
+    text-align: initial;
+    font-size: 3.6rem;
+}
+
+.logo-container img {
+    height: 100%;
+}
+
+.hero.image {
+    grid-area: hero;
+    justify-self: end;
+}
+
+.buttons-container {
+    grid-area: buttons;
+    justify-content: flex-start;
+}
+
+.buttons-container a {
+    font-size: 2.4rem;
+}
+
+.total-connections {
+    grid-area: total;
+}
+
+/*  minuto 1:25 */
